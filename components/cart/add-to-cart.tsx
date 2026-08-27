@@ -5,7 +5,8 @@ import { addItem } from 'components/cart/actions';
 import { Button } from 'components/ui/button';
 import { ProductVariant } from 'lib/shopify/types';
 import { useSearchParams } from 'next/navigation';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 
 function SubmitButton({
   availableForSale,
@@ -64,7 +65,7 @@ export function AddToCart({
   variants: ProductVariant[];
   availableForSale: boolean;
 }) {
-  const [message, formAction] = useFormState(addItem, null);
+  const [message, formAction] = useActionState(addItem, undefined);
   const searchParams = useSearchParams();
   const defaultVariantId = variants.length === 1 ? variants[0]?.id : undefined;
   const variant = variants.find((variant: ProductVariant) =>

@@ -27,7 +27,7 @@ export default function ProductView({ productList }: ProductViewProps) {
       {/*   filterVals={filterVals} */}
       {/*   handleFilterClick={handleFilterClick} */}
       {/* /> */}
-      <div className="grid w-full grid-cols-1 gap-fluid-48 md:grid-cols-2 lg:grid-cols-3">
+      <div className="gap-fluid-48 grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {productList.map((p) => {
           return <ProductCard key={p.id} product={p} />;
         })}

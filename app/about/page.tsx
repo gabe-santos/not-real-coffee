@@ -5,13 +5,13 @@ import running from 'public/images/running-group.jpg';
 
 export default function About() {
   return (
-    <div className="mb-3xl mt-3xl flex w-full max-w-screen-lg justify-center px-sm ">
+    <div className="mt-3xl mb-3xl flex w-full max-w-5xl justify-center px-sm">
       <section className="flex h-screen w-full flex-col items-center gap-lg">
-        <div className="flex w-full flex-col justify-evenly gap-md md:flex-row ">
+        <div className="flex w-full flex-col justify-evenly gap-md md:flex-row">
           <PersonCard src={steven} name="Steven Yamane" title="Founder & CEO" />
           <PersonCard src={gabe} name="Gabe Santos" title="Director of Coffee" />
         </div>
-        <div className="max-w-screen-lg rounded-3xl border border-black p-md ">
+        <div className="max-w-5xl rounded-3xl border border-black p-md">
           <h3 className="w-full text-left font-semibold uppercase">Our Story</h3>
           <p className="text-lg leading-tight md:text-xl">
             NOT REAL* is not real. It is not a real coffee company. This is a design and development

@@ -36,8 +36,8 @@ export default async function HomePage() {
           <Image src={running} alt="running" className="h-full w-full object-cover" />
         </div>
         <div className="flex h-full w-full flex-col justify-start rounded-3xl">
-          <div className="flex flex-col gap-xl rounded-3xl bg-black p-md text-white ">
-            <h2 className="text-pretty text-lg font-semibold uppercase leading-none md:text-xl">
+          <div className="flex flex-col gap-xl rounded-3xl bg-black p-md text-white">
+            <h2 className="text-lg leading-none font-semibold text-pretty uppercase md:text-xl">
               The Void of Perfect Brew
             </h2>
             <p className="leading-tight md:text-xl">
@@ -53,7 +53,7 @@ export default async function HomePage() {
           </div>
         </div>
       </TwoColumnSection>
-      <section className="h-1/2 "></section>
+      <section className="h-1/2"></section>
 
       <section className="h-screen">
         <div className="flex h-full max-h-screen w-full justify-center overflow-hidden rounded-3xl">
@@ -61,7 +61,7 @@ export default async function HomePage() {
         </div>
       </section>
       <TwoColumnSection>
-        <div className="flex w-full flex-col rounded-3xl border border-black p-md text-xl ">
+        <div className="flex w-full flex-col rounded-3xl border border-black p-md text-xl">
           <p> Coffee for closers.</p>
           <p> For dreamers.</p>
           <p> For go-getters and winners.</p>

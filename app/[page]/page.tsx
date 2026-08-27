@@ -1,8 +1,8 @@
 import { getPage } from 'lib/shopify';
 import { notFound } from 'next/navigation';
 
-export default async function Page({ params }: { params: { page: string } }) {
-  const page = await getPage(params.page);
+export default async function Page({ params }: { params: Promise<{ page: string }> }) {
+  const page = await getPage((await params).page);
 
   if (!page) return notFound();
 

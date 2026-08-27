@@ -5,9 +5,9 @@ import arrow from 'public/arrow-up.svg';
 
 export default function Footer() {
   return (
-    <footer className="flex w-full flex-col items-center justify-between gap-sm rounded-t-3xl bg-black px-md pb-sm pt-2xl text-white">
+    <footer className="flex w-full flex-col items-center justify-between gap-sm rounded-t-3xl bg-black px-md pt-2xl pb-sm text-white">
       {/* Links Section */}
-      <div className="grid w-full grid-cols-2 items-start justify-between gap-sm md:grid-cols-4 ">
+      <div className="grid w-full grid-cols-2 items-start justify-between gap-sm md:grid-cols-4">
         <div className="flex w-full flex-col">
           <h3>Browse</h3>
           <ul className="flex flex-col text-grey">
@@ -37,10 +37,10 @@ export default function Footer() {
           <label className="text-md" htmlFor="email">
             Sign up to stay up to date with news and new releases
           </label>
-          <input type="text" className="border border-grey bg-glass text-grey pill" name="email" />
+          <input type="text" className="pill border border-grey bg-glass text-grey" name="email" />
         </div>
       </div>
-      <Image className="w-screen " src={notRealBig} alt="not real big logo" />
+      <Image className="w-screen" src={notRealBig} alt="not real big logo" />
       <div className="flex w-full justify-between pt-sm text-sm">
         <p className="">
           Made with 🫶🏽 by <Link href="https://gabesantos.dev">Gabe Santos</Link>

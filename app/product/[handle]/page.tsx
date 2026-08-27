@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { Suspense } from 'react';
 import ColdBrewCanDetails from 'components/product/cold-brew-can-details';
 
-export default async function ProductPage({ params }: { params: { handle: string } }) {
-  const product = await getProduct(params.handle);
+export default async function ProductPage({ params }: { params: Promise<{ handle: string }> }) {
+  const product = await getProduct((await params).handle);
 
   if (!product) return notFound();
   console.log(product);

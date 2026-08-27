@@ -27,13 +27,13 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
         as={Button}
         onClick={toggleCart}
         variant="glass"
-        className={`relative transition-all duration-300 pill ${isOpen ? 'invert' : ''}`}
+        className={`relative pill transition-all duration-300 ${isOpen ? 'invert' : ''}`}
       >
         Cart ({cart?.totalQuantity})
       </MenuButton>
       <MenuItems
         anchor="bottom end"
-        className="max-h-5/6 my-sm w-[400px] rounded-3xl border bg-white p-sm"
+        className="my-sm max-h-5/6 w-[400px] rounded-3xl border bg-white p-sm"
       >
         <h1 className="">Cart</h1>
         {!cart || cart.lines.length === 0 ? (
@@ -120,7 +120,7 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
             </div>
             <Link
               href={cart.checkoutUrl}
-              className="flex items-center justify-center bg-black text-white pill hover:invert"
+              className="flex pill items-center justify-center bg-black text-white hover:invert"
             >
               Checkout
             </Link>

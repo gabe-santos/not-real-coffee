@@ -1,5 +1,4 @@
 'use client';
-import { useState, useEffect } from 'react';
 import { Product, ProductVariant } from 'lib/shopify/types';
 import { CanVariantSelector } from './can-variant-selector';
 import { AddToCart } from 'components/cart/add-to-cart';
@@ -26,17 +25,15 @@ interface ColdBrewCan extends Product {
 }
 
 export default function ColdBrewCanDetails({ coldBrewCan }: { coldBrewCan: ColdBrewCan }) {
-  const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null | undefined>(null);
   const searchParams = useSearchParams();
-
-  useEffect(() => {
-    const variant = coldBrewCan.variants.find((variant: ProductVariant) =>
+  // Derived from the URL during render; keeping this in state would trigger a
+  // cascading re-render and flash "Price not available" on first paint.
+  const selectedVariant =
+    coldBrewCan.variants.find((variant: ProductVariant) =>
       variant.selectedOptions.every(
         (option) => option.value === searchParams.get(option.name.toLowerCase())
       )
-    );
-    setSelectedVariant(variant || coldBrewCan.variants[0]);
-  }, [searchParams, coldBrewCan.variants]);
+    ) ?? coldBrewCan.variants[0];
 
   return (
     <div className="flex w-full basis-full flex-col items-center justify-end">

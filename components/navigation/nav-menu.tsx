@@ -42,7 +42,7 @@ export default function NavMenu({ options }: { options: NavMenuItem[] }) {
           as={Button}
           onClick={handleToggle}
           variant="glass"
-          className={`relative z-50 transition-all duration-300 pill ${isOpen ? 'invert ' : ''}`}
+          className={`relative z-50 pill transition-all duration-300 ${isOpen ? 'invert' : ''}`}
         >
           Menu
           {isOpen ? (
@@ -54,7 +54,7 @@ export default function NavMenu({ options }: { options: NavMenuItem[] }) {
 
         {/* Menu content */}
         <MenuItems
-          className={`z-45 fixed inset-x-0 top-0 flex h-screen w-screen flex-col items-center transition-opacity duration-300 ease-in-out ${
+          className={`fixed inset-x-0 top-0 z-45 flex h-screen w-screen flex-col items-center transition-opacity duration-300 ease-in-out ${
             isOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
           }`}
         >
